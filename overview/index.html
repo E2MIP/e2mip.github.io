@@ -8,7 +8,7 @@
 
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Introduction - E2MIP</title>
+    <title>Challenge Overview - E2MIP</title>
 
     
     <link href="/css/nucleus.css?1681893739" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/overview/">
     <nav id="sidebar" class="">
 
 
@@ -89,7 +89,7 @@
     
     <li data-nav-id="/overview/" title="Challenge Overview" class="dd-item
         
-        
+        active
         
         ">
       <a href="/overview/">
@@ -186,30 +186,106 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/'>Introduction</a> > Challenge Overview
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#outline-and-datasets">Outline and Datasets</a></li>
+    <li><a href="#tasks">Tasks</a>
+      <ul>
+        <li><a href="#task-1-classification-of-a-known-dataset">Task 1: Classification of a known dataset</a></li>
+        <li><a href="#task-2-segmentation-of-a-known-dataset">Task 2: Segmentation of a known dataset</a></li>
+        <li><a href="#task-3">Task 3</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              Challenge Overview
+            </h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h1 id="welcome-to-the-e2mip-challenge">Welcome to the E2MIP Challenge!</h1>
-<h2 id="introduction">Introduction</h2>
-<p>To combat the damaging effects of climate change, conserving energy is imperative. However, the increasing use of computational resources for medical image processing remains a concerning trend. That&rsquo;s where our international challenge comes in: We aim to cultivate and evaluate innovative solutions that prioritize energy-efficiency in the development and deployment of medical image processing algorithms, ultimately resulting in more sustainable and superior solutions.</p>
-<p>This challenge centers on two vital tasks in medical image analysis: segmentation and classification. The goal isn&rsquo;t just to identify the most high-performing solution but also to consider energy consumption during data acquisition. We believe that the participants&rsquo; discoveries will set a new standard for efficiency and inspire further advances across various domains.</p>
-<p>We encourage all interested parties to subscribe to our newsletter to stay informed of any updates!</p>
-<h2 id="timeline">Timeline</h2>
-<p>The challenge is currently open.</p>
-<p>Submission date is the 17th of September. Late submissions might be possible, but we cannot guarantee the execution of the submission.</p>
+
+	<h2 id="outline-and-datasets">Outline and Datasets</h2>
+<p>The challenge consists of different based on two datasets, allowing the evaluation of optimization ideas on different tasks. While we encourage everyone to submit solutions for the different tasks, this is optional.</p>
+<p>Two datasets are used for this challenge. Their complementary nature allows for assessing different aspects of the development phase.</p>
+<ul>
+<li>A private dataset (The Boston Child Dataset). XXX (Describe the dataset here. )</li>
+<li>A public dataset (The LIDC dataset) XXX (Describe the dataset here)</li>
+</ul>
+<p>The solutions have to be submitted as a script that generated a container which then includes the final solution. The script will be executed by the organizers to create the target containers. The container will then be run on a high-performance system which allows for tracking the energy consumption. There is no limitation w.r.t to the technology that can be used, as long as it is possible to run inside the container and all custom code is readable to the organizers to allow for rule checking. For more details on the requirements see the rule section.</p>
+<h2 id="tasks">Tasks</h2>
+<p>This year, the following tasks will be evaluated.</p>
+<h3 id="task-1-classification-of-a-known-dataset">Task 1: Classification of a known dataset</h3>
+<p>The objective is to predict the malignancy of lung nodules based on CT images, with segmentations of each nodule already being provided. The entire dataset is available to participants, reflecting the standard development process.
+To tackle this task, participants must submit their untrained solutions, which will then be trained and evaluated on an unknown data split. As such, the submitted solution must contain both the training process and the inference process. Non-learning-based solutions may opt for an empty training process.
+The submitted solutions will be evaluated on their classification performance and energy consumption during both the training and inference phases.</p>
+<h3 id="task-2-segmentation-of-a-known-dataset">Task 2: Segmentation of a known dataset</h3>
+<p>The objective is to segment lung nodules based on CT images. The entire dataset is available to participants, reflecting the standard development process.
+To tackle this task, participants must submit their untrained solutions, which will then be trained and evaluated on an unknown data split. As such, the submitted solution must contain both the training process and the inference process. Non-learning-based solutions may opt for an empty training process.
+The submitted solutions will be evaluated on their segmentation performance and energy consumption during both the training and inference phases.</p>
+<h3 id="task-3">Task 3</h3>
+<p>The goal is to segment XXX in slices of 3D MR images. The dataset is mainly unknown to the participants, only exemplary images are available.
+To solve this task, the participants have to submit their untrained solution. The solution will then be trained and evaluated on the final training- and test-dataset. Since the original dataset is not available, the submitted solution must not only contain any training and the inference process but also the final hyperparameter tuning. An empty training process is possible for non-learning-based solutions.
+The solution will be evaluated w.r.t to classification performance as well as energy consumption during hyperparameter tuning with training and inference.</p>
+
+
+
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div>
         
@@ -241,8 +317,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -259,6 +333,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -296,8 +373,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/" title="Introduction"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/overview/" title="Challenge Overview" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/rules/" title="Rules" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -329,4 +408,3 @@
 
   </body>
 </html>
-
