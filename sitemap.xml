@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://e2mip.github.io/</loc>
+    <loc>/overview/</loc>
   </url><url>
-    <loc>https://e2mip.github.io/homepage/</loc>
-    <priority>0</priority>
+    <loc>/rules/</loc>
+  </url><url>
+    <loc>/more_information/</loc>
+  </url><url>
+    <loc>/credits/</loc>
+  </url><url>
+    <loc>/categories/</loc>
+  </url><url>
+    <loc>/</loc>
+  </url><url>
+    <loc>/tags/</loc>
   </url>
 </urlset>

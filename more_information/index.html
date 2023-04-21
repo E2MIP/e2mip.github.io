@@ -8,7 +8,7 @@
 
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Introduction - E2MIP</title>
+    <title>More Information (?) - E2MIP</title>
 
     
     <link href="/css/nucleus.css?1681893739" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/more_information/">
     <nav id="sidebar" class="">
 
 
@@ -137,7 +137,7 @@
     
     <li data-nav-id="/more_information/" title="More Information (?)" class="dd-item
         
-        
+        active
         
         ">
       <a href="/more_information/">
@@ -186,30 +186,109 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/'>Introduction</a> > More Information (?)
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#more-information-">More Information (?)</a>
+      <ul>
+        <li><a href="#starting-point">Starting point</a></li>
+        <li><a href="#submission-process">Submission Process</a></li>
+        <li><a href="#challenge-publication">Challenge Publication</a></li>
+        <li><a href="#evaluation">Evaluation</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              More Information (?)
+            </h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h1 id="welcome-to-the-e2mip-challenge">Welcome to the E2MIP Challenge!</h1>
-<h2 id="introduction">Introduction</h2>
-<p>To combat the damaging effects of climate change, conserving energy is imperative. However, the increasing use of computational resources for medical image processing remains a concerning trend. That&rsquo;s where our international challenge comes in: We aim to cultivate and evaluate innovative solutions that prioritize energy-efficiency in the development and deployment of medical image processing algorithms, ultimately resulting in more sustainable and superior solutions.</p>
-<p>This challenge centers on two vital tasks in medical image analysis: segmentation and classification. The goal isn&rsquo;t just to identify the most high-performing solution but also to consider energy consumption during data acquisition. We believe that the participants&rsquo; discoveries will set a new standard for efficiency and inspire further advances across various domains.</p>
-<p>We encourage all interested parties to subscribe to our newsletter to stay informed of any updates!</p>
-<h2 id="timeline">Timeline</h2>
-<p>The challenge is currently open.</p>
-<p>Submission date is the 17th of September. Late submissions might be possible, but we cannot guarantee the execution of the submission.</p>
+
+	<h2 id="more-information-">More Information (?)</h2>
+<h3 id="starting-point">Starting point</h3>
+<p>Baseline solutions are available for each task. The code for task 1 and task 2 can be found in this repository, while the code for task 3 is given here.</p>
+<p>These solutions provide a straightforward baseline. It can be used to help to prepare own solutions or serve as a starting point for individual developments. Of course, their own solutions are encouraged.</p>
+<h3 id="submission-process">Submission Process</h3>
+<p>Each submission requires three aspects to be considered. Please read this in advance to make sure that all information is gathered.</p>
+<ol>
+<li>A script to create the container that includes the training and inference phase.</li>
+<li>A paper that describes the submitted solution and possibly includes a preliminary analysis.</li>
+<li>A complete answer of the submission questions. These include:
+<ul>
+<li>Basic organization questions like name and affiliation of team members</li>
+<li>A Survey on the training process. Asking for estimates aspects like the number of training runs, the data usage during training, the estimated run-time for all experiments.</li>
+</ul>
+</li>
+</ol>
+<p>Please make sure to roughly track the development process in order to be able to answer all questions, especially point 3b.</p>
+<h3 id="challenge-publication">Challenge Publication</h3>
+<p>A summary publication describing the findings from the challenge is envisioned after the challenge. We envision the publication in a leading journal and successful teams are invited to contribute to the paper. The number of coauthors per team will be decided later depending on the number of submissions, we aim for at least two coauthors per team.</p>
+<h3 id="evaluation">Evaluation</h3>
+<p>The evaluation will consider two aspects: the algorithm’s performance and energy efficiency. We see both as related and think that there is a trade-off. To avoid a focus on a certain aspect, we will jointly evaluate them. This allows picking more energy-efficient solutions if the performance is less critical and vice versa for more performance-critical applications.</p>
+<p>Consequently, we will not name a specific winner for each task but use a Pareto-front to evaluate all approaches. The submissions will be shown in a diagram with both aspects as axis labels. A solution is on the Pareto-front when there is no other solution that performs better while showing the same or better energy efficiency.</p>
+<p>To ensure that all submissions are still usable, we require a minimum performance of 80% of the baseline approaches and allow a maximum time for training and inference.</p>
+<p>Training and inference of each submission will be conducted on a HPC node with 4 NVIDIA A100 GPUs (each 48 GB VRAM) and a Intel Xeon Platinum 8368 processor. For task 1 and task 2, a maximum runtime of 4 days is allowed, and for task 3 a maximum of 7 days.</p>
+<p>The key metrics for performance evaluation will be Area under ROC-Curve for classification and DICE for segmentation. The energy consumption will be used as measured by the system’s hardware.</p>
+
+
+
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div>
         
@@ -276,6 +355,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -295,6 +375,8 @@
 
 	 
 	 
+		
+			<a class="nav nav-prev" href="/rules/" title="Rules"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/overview/" title="Challenge Overview" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -329,4 +411,3 @@
 
   </body>
 </html>
-
