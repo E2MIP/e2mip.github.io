@@ -8,7 +8,7 @@
 
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Challenge Overview - E2MIP</title>
+    <title>More Information - E2MIP</title>
 
     
     <link href="/css/nucleus.css?1686308992" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/overview/">
+  <body class="" data-url="/more_information/">
     <nav id="sidebar" class="">
 
 
@@ -89,7 +89,7 @@
     
     <li data-nav-id="/overview/" title="Challenge Overview" class="dd-item
         
-        active
+        
         
         ">
       <a href="/overview/">
@@ -137,7 +137,7 @@
     
     <li data-nav-id="/more_information/" title="More Information" class="dd-item
         
-        
+        active
         
         ">
       <a href="/more_information/">
@@ -205,7 +205,7 @@
             
           
           
-            <a href='/'>Introduction</a> > Challenge Overview
+            <a href='/'>Introduction</a> > More Information
           
         
           
@@ -218,20 +218,10 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#outline">Outline</a></li>
-    <li><a href="#datasets">Datasets</a>
-      <ul>
-        <li><a href="#dataset-1-lung-nodule">Dataset 1 (Lung Nodule)</a></li>
-        <li><a href="#dataset-2-fetal-brain-mri">Dataset 2 (Fetal brain MRI)</a></li>
-      </ul>
-    </li>
-    <li><a href="#tasks">Tasks</a>
-      <ul>
-        <li><a href="#task-1-classification-of-a-known-dataset-dataset-1">Task 1: Classification of a known dataset (Dataset 1)</a></li>
-        <li><a href="#task-2-segmentation-of-a-known-dataset-dataset-1">Task 2: Segmentation of a known dataset (Dataset 1)</a></li>
-        <li><a href="#task-3-segmentation-of-an-unknown-dataset-dataset-2">Task 3: Segmentation of an unknown dataset (Dataset 2)</a></li>
-      </ul>
-    </li>
+    <li><a href="#starting-point">Starting point</a></li>
+    <li><a href="#evaluation">Evaluation</a></li>
+    <li><a href="#submission-process">Submission Process</a></li>
+    <li><a href="#challenge-publication">Challenge Publication</a></li>
   </ul>
 </nav>
     </div>
@@ -249,7 +239,7 @@
           
             <h1>
               
-              Challenge Overview
+              More Information
             </h1>
           
 
@@ -257,24 +247,36 @@
 
 
 
-	<h2 id="outline">Outline</h2>
-<p>The Energy-Efficient Medical Image Processing challenge consists of three tasks based on two datasets. A participating team may address only one or two of the tasks, but we encourage everyone to submit solutions for all three tasks.</p>
-<p>The solutions have to be submitted as a script that generates a container which then includes the final solution. The script will be executed by the organizers to create the target containers which will then be run on a high-performance computational system with the capability to monitor and record the energy consumption. There is no limitation w.r.t to the technology that can be used, as long as it is possible to run inside the container, and all custom code is readable to the organizers to allow for rule checking. Of course, the task must be solved by relying on the provided training/test data without incorporating additional knowledge about the dataset during inference. For more details on the requirements, please see the Rules section.</p>
-<h2 id="datasets">Datasets</h2>
-<p>Two datasets are used for this challenge. Their complementary nature allows for assessing different aspects of the development phase.</p>
-<h3 id="dataset-1-lung-nodule">Dataset 1 (Lung Nodule)</h3>
-<p>Here, the public LIDC-IDRI dataset will be used. It contains more than 1.000 CT images of patients with lung nodules. All images have been annotated by experts with segmentations (for nodules &gt; 3mm) and a malignancy rating. The corresponding publications give a detailed description of the dataset (<a href="https://doi.org/10.7937/K9/TCIA.2015.LO9QL9SX">10.7937/K9/TCIA.2015.LO9QL9SX</a> , <a href="https://doi.org/10.1118/1.3528204">10.1118/1.3528204</a> )
-The dataset can be downloaded from the <a href="https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=1966254">The Cancer Imaging Archive (TCIA)</a>. Beside the images and annotations, this includes additional description and details of the dataset.</p>
-<h3 id="dataset-2-fetal-brain-mri">Dataset 2 (Fetal brain MRI)</h3>
-<p>This dataset consists of T2-weighted and diffusion-weighted MRI scans of fetal brains. The brain has been manually segmented by an expert to provide ground truth labels. The dimensions of T2-weighted and diffusion-weighted MRI images, respectively, are 256 x 256 x S and 128 x 128 x S voxels, where S is the number of slices in the scan. In other words, the size of each 2D slice for T2-weighted and diffusion-weighted scans are 256 x 256 and 128 x 128, respectively. The within-slice resolutions vary. Scans are available as NIfTI files (.nii.gz).</p>
-<h2 id="tasks">Tasks</h2>
-<h3 id="task-1-classification-of-a-known-dataset-dataset-1">Task 1: Classification of a known dataset (Dataset 1)</h3>
-<p>The objective is to predict the malignancy of lung nodules based on CT images, with segmentations of each nodule already being provided. The entire dataset is available to participants, reflecting the standard development process. To tackle this task, participants must submit their untrained solutions, which will then be trained and evaluated on an undisclosed data split. As such, the submitted solution must contain both the training process and the inference process. Non-learning-based solutions may opt for an empty training process. The submitted solutions will be evaluated based on their classification performance and energy consumption during both the training and inference phases.</p>
-<h3 id="task-2-segmentation-of-a-known-dataset-dataset-1">Task 2: Segmentation of a known dataset (Dataset 1)</h3>
-<p>The objective is to segment lung nodules on CT images. The entire dataset is available to participants, reflecting the standard development process. To tackle this task, participants must submit their untrained solutions, which will then be trained and evaluated on an undisclosed data split. As such, the submitted solution must contain both the training process and the inference process. Non-learning-based solutions may opt for an empty training process. The submitted solutions will be evaluated based on their segmentation performance and energy consumption during both the training and inference phases.</p>
-<h3 id="task-3-segmentation-of-an-unknown-dataset-dataset-2">Task 3: Segmentation of an unknown dataset (Dataset 2)</h3>
-<p>For this task, the dataset is not disclosed to the participants. Only a few examples are provided in order to give the participants a sense of how the data look like. The objective is to segment the fetal brain in MRI slices.
-To solve this task, the participants have to submit their untrained solution. The solution will then be trained and evaluated on the final training and test data samples. Since the dataset is not disclosed, the submitted solution must include any hyperparameter tuning that the participating teams may wish to implement. Needless to say, the energy usage for such hyperparameter tuning will be counted towards the total energy usage. Therefore, methods that can reach high segmentation accuracy with little hyperparameter tuning will be advantageous. An empty training process is possible for non-learning-based solutions.</p>
+	<h2 id="starting-point">Starting point</h2>
+<p>We provide code to generate sample data for the Challenge datasets:</p>
+<p><strong>Dataset 1</strong>: <a href="https://github.com/XRad-Ulm/E2MIP_LIDCI-IDRI_data">GitHub LIDCI-IDRI Data</a></p>
+<p>Furthermore, we provide baseline implementations for the Challenge tasks:</p>
+<p><strong>Task 1</strong>: <a href="https://github.com/XRad-Ulm/E2MIP_LIDCI-IDRI_classification">GitHub LIDCI-IDRI Classification</a></p>
+<p><strong>Task 2</strong>: <a href="https://github.com/XRad-Ulm/E2MIP_LIDC-IDRI_segmentation">GitHub LIDCI-IDRI Segmentation</a></p>
+<p><strong>Task 3</strong>: <a href="https://github.com/Faghihpirayesh/E2MIP_Challenge_FetalBrainSegmentation">GitHub Fetal Brain Segmentation</a></p>
+<p>These solutions provide a straightforward baseline and should help to prepare own solutions. They can also serve as a starting point for individual development, but a completely new design is possible and encouraged.</p>
+<p>Right now, the baseline implementations are missing the containerizing scripts. As the evaluation system is currently set up, we didn’t want to share a solution that might have to be changed again. As soon as the system is finalized and tested, a template containerizing script will be provided.</p>
+<h2 id="evaluation">Evaluation</h2>
+<p>The evaluation of submissions will consider both the algorithm&rsquo;s performance and energy efficiency, as we anticipate that there will be a trade-off between the two. To avoid a bias towards a particular aspect, we will jointly evaluate them, allowing for more energy-efficient solutions if performance is less critical and vice versa for more performance-critical applications.</p>
+<p>We will not name a specific winner for each task but will use a Pareto-front to evaluate all approaches. Submissions will be displayed in a diagram with both aspects as axis labels. A solution will be on the Pareto-front when there is no other solution that performs better while showing the same or better energy efficiency.</p>
+<p>To ensure that all submissions are still usable, we require a minimum performance of 80% of the baseline approaches and allow a maximum time for training and inference. Training and inference for each submission will be conducted on a high-performance computing node with 4 NVIDIA A100 GPUs (each with 48 GB VRAM) and an Intel Xeon Platinum 8368 processor. Task 1 and Task 2 have a maximum runtime of 4 days, while Task 3 has a maximum runtime of 7 days.</p>
+<p>The key metrics for performance evaluation will be the Area under ROC-Curve for classification and Dice Similarity Coefficient for segmentation. Energy consumption will be measured by the system&rsquo;s hardware. Example code the calculation of performance metrics is included in the baseline implementations.</p>
+<h2 id="submission-process">Submission Process</h2>
+<p>Each submission requires three aspects to be considered. Please read this in advance to make sure that all information is gathered.</p>
+<ol>
+<li>A script to create the container that includes the training and inference phases.</li>
+<li>A paper that describes the submitted solution and possibly includes a preliminary analysis.</li>
+<li>A complete answer to the submission questions. These include:
+<ul>
+<li>Basic organization questions like name and affiliation of team members.</li>
+<li>A Survey on the development process, including questions on the training procedures, any external data used for pre-training, the estimated run-time of all experiments.</li>
+</ul>
+</li>
+</ol>
+<p>Please make sure to roughly track the development process in order to be able to answer all questions, especially point 3b.</p>
+<p>The submission process will be done via CMT3, the same system that is used for MICCAI submissions. The link to the submission page will be communicated here.</p>
+<h2 id="challenge-publication">Challenge Publication</h2>
+<p>A summary publication in a leading journal describing the findings from the challenge is envisioned after the challenge. Successful teams are invited to contribute to the paper. The number of coauthors per team will be decided later depending on the number of submissions. We aim for at least two co-authors per team.</p>
 
 
 
@@ -315,23 +317,6 @@ To solve this task, the participants have to submit their untrained solution. Th
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -350,6 +335,23 @@ To solve this task, the participants have to submit their untrained solution. Th
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -371,10 +373,10 @@ To solve this task, the participants have to submit their untrained solution. Th
 	 
 	 
 		
-			<a class="nav nav-prev" href="/" title="Introduction"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/rules/" title="Rules"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/rules/" title="Rules" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/overview/" title="Challenge Overview" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
